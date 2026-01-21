@@ -1,0 +1,5 @@
+{
+  "name": "Cubemap 360 Multi-Tiling Generator",
+  "description": "An advanced 360-degree image viewer that converts equirectangular photos into multi-resolution cubemap tiles (Level 1-3) using Web Workers for high-performance zooming and detail preservation.",
+  "requestFramePermissions": []
+}
