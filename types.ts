@@ -15,6 +15,21 @@ export interface ProcessedData {
   level3: TileData[];
 }
 
+export interface MarkerTarget {
+  imageId: string;
+  fov: number;
+  rotation: { x: number; y: number; z: number };
+}
+
+export interface Marker {
+  id: string;
+  type: 'HOTSPOT' | 'TEXT';
+  position: { x: number; y: number; z: number };
+  content?: string;
+  target?: MarkerTarget;
+  color?: string;
+}
+
 export type ProcessStatus = 'PENDING' | 'PROCESSING' | 'COMPLETED' | 'ERROR';
 
 export interface ImageItem {
@@ -25,4 +40,5 @@ export interface ImageItem {
   progress: number;
   result?: ProcessedData;
   error?: string;
+  markers: Marker[];
 }
